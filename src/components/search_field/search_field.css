@@ -1,8 +1,16 @@
-.search-field {
+.search-field input {
   margin-top: 2rem;
-  width: 50%;
   font-size: 30px;
   outline: none;
   border-radius: 5px;
   padding: 3px;
+}
+
+.search-field input.invalid {
+  border-color: red;
+}
+
+.search-field div {
+  font-size: smaller;
+  color: red;
 }
