@@ -1,0 +1,24 @@
+.repo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  padding: 5px;
+  min-height: 120px;
+  width: 300px;
+  background-color: white;
+  margin: 10px;
+}
+
+.repo-name {
+  display: block;
+}
+
+.repo-lang {
+  color: red;
+}
+
+.last-update {
+  color: darkslateblue;
+}
