@@ -1,0 +1,42 @@
+.user-card {
+  border-radius: 5px;
+  box-shadow: 0 0 5px black;
+  margin: 0 10px 20px;
+  height: 120px;
+  width: 300px;
+  background-color: white;
+}
+
+.user-card:hover {
+  box-shadow: 0 0 10px black;
+}
+
+.user-card a {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+
+.user-card .user-avatar {
+  margin: auto 10px;
+  height: 100px;
+  width: 100px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.user-card div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  width: 100%;
+  padding-left: 20px;
+}
+
+.user-card .user-login {
+  font-weight: 900;
+  font-size: large;
+}
