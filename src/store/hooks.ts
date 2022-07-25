@@ -3,7 +3,6 @@ import { bindActionCreators } from '@reduxjs/toolkit';
 
 import type { RootState, AppDispatch } from './store';
 import { searchQueryActions } from './search_query_reducer';
-import { pageActions } from './page_reducer';
 
 // Use throughout your app instead of plain `useDispatch` and `useSelector`
 export const useAppDispatch = () => useDispatch<AppDispatch>();
@@ -13,10 +12,4 @@ export const useSearchAction = () => {
   const dispatch = useAppDispatch();
 
   return bindActionCreators(searchQueryActions, dispatch);
-};
-
-export const usePageAction = () => {
-  const dispatch = useAppDispatch();
-
-  return bindActionCreators(pageActions, dispatch);
 };
