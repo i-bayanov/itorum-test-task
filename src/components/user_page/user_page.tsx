@@ -21,6 +21,7 @@ export default function UserPage() {
             alt={`${data?.name} avatar`}
           />
           {data?.name && <p className='name'>{data?.name}</p>}
+          <p className='login'>{data?.login}</p>
           {data?.company && <p className='company'>{data?.company}</p>}
           <a
             href={data?.html_url}
