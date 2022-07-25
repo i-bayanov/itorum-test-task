@@ -5,6 +5,7 @@
   height: 120px;
   width: 300px;
   background-color: white;
+  overflow-x: hidden;
 }
 
 .user-card:hover {

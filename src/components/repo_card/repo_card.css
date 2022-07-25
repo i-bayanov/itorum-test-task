@@ -9,6 +9,7 @@
   width: 300px;
   background-color: white;
   margin: 10px;
+  overflow-x: hidden;
 }
 
 .repo-name {
