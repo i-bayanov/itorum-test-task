@@ -12,19 +12,18 @@ export default function UserList() {
   const pageNum = Number(num) || 1;
   const { query } = useAppSelector(state => state.search);
   const {isFetching, isError, data} = useSearchQuery(
-    {q: query, page: pageNum},
+    { q: query, page: pageNum },
     { skip: query.length < 3 },
   );
   const pagesTotal = Math.ceil(data?.total_count! / 9);
+  const isEverythingOK = query.length >= 3 && !isFetching && !isError;
+  const isThereAnythingToShow = Boolean(data?.items.length);
 
   return (
     <div className='user-list'>
       {isFetching && <p>Loading...</p>}
       {isError && <p>Something went wrong!</p>}
-      {query.length >=3
-        && !isFetching
-        && !isError
-        && Boolean(data?.items.length)
+      {isEverythingOK && isThereAnythingToShow
         && <>
           <div className='list-wrapper'>
             {data?.items.map((item) => <UserCard key={item.id} {...item}/>)}
@@ -41,10 +40,7 @@ export default function UserList() {
           </div>
         </>
       }
-      {query.length >= 3
-        && !isFetching
-        && !isError
-        && !data?.items.length
+      {isEverythingOK && !isThereAnythingToShow
         && <div>Nothing found</div>
       }
     </div>
